@@ -3,11 +3,11 @@
 <head>
 <link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
 	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
-	
+	<link rel="stylesheet" href="css/responsive.css">
 </head>
 <!-- hijacking: on/off - animation: none/scaleDown/rotate/gallery/catch/opacity/fixed/parallax -->
 
-<body>
+<body class="bstyle">
 <div id="section">
 	<div id="nav">
 		<div class="block">
@@ -16,7 +16,7 @@
 				<img src="image/localization-icon-27.png" class="nav-img" alt=""/>
 				<b class="nav-event">Event</b>
 			</div>
-			<ul class="navigation">
+			<ul class="navigation topnav">
 				<li class="navigation-menu"><a class="active" href="#home"><b>Home</b></a></li>
 				<li class="navigation-menu"><a href="#contact"><b>schedule</b></a></li>
 				<li class="navigation-menu"><a href="#news"><b>Subscribe</b></a></li>
@@ -25,6 +25,8 @@
   				<li class="navigation-menu"><a class="about"><b>Parteners</b></a></li>
   				<li class="navigation-menu"><a class="about"><b>Pricing Table</b></a></li>
 				<li class="navigation-menu"><a class="about"><b>Register</b></a></li>
+				<!-- <button type="button" class="btn">menu</button> -->
+				<img src="image/toggle.svg" class="btn" alt=""/>
 			</ul>
 		</div>
 	</div>
@@ -37,8 +39,8 @@
 			The Awesome <br>Conference
 		</div>
 		<br/>
-		<div class="blk banner">
-			<div class="box">
+		<div class="blk banner fltnone quater-size">
+			<div class="box spl-box reg-padding">
 				Register
 			</div>
 			<div class="clear"></div>
@@ -66,7 +68,7 @@
 			</div>
 		</div>
 		
-		<div class=" row nav clearfix">
+		<div class=" row nav clearfix schedule-mobile">
 			<div class="brdr"></div>
 				<div class="sch">
 					<div class="nav">
@@ -115,13 +117,13 @@
 		
 		<br>
 		<div class="row nav clearfix">
-		<div class="brdr"></div>
-			video<p>Awesome section description goes here.</p>
+		<div class="brdr mt"></div>
+			Video<p>Awesome section description goes here.</p>
 			<div class="nav clearfix">
 				<div class="video video-wrap">
 					<img src="image/video.png" class="responsive-img" alt="" />
 				</div>
-				<div class="sch" style="float:right;width:35%;">
+				<div class="sch video-info">
 					Lorem ipsum
 					<div class="hr"></div>
 					<p>
@@ -134,41 +136,41 @@
 		</div>
 		<div class="nav">
 		<div class="brdr" style="margin-top:40px;"></div>
-		<div class="row navigation clearfix photo-wrapper">
+		<div class="row navigation clearfix photo-wrapper nomargin">
 
-		photos
+		Photos
 				<br>
 				<p style="float:right;">Awesome section description goes here.</p>
 			</div>
 		<div class="row navigation clearfix photo">
 			
-			<div class="sch" style="width:45%;">
+			<div class="sch video-info" style="float:left;">
 				Lorem ipsum
 				<p>
 					<br>	
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, quos, ratione, optio, blanditiis deserunt saepe iure sunt odit atque eius voluptatum labore excepturi explicabo aliquid sapiente porro voluptas commodi sint?
 				</p>
-				<div class="block1">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, quas, quibusdam, impedit ducimus nisi fugiat veritatis cupiditate commodi
+				<div class="block1 schedule">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, quas, quibusdam, impedit ducimus nisi fugiat veritatis cupiditate commodi<p>
 				</div>
 			</div>
 			<div class="sch">
-				<div class="video">
+				<div class="video video2">
 					<img src="image/slide-01.jpg" class="responsive-img" alt="" />
 				</div>
 			</div>
 		</div>
 	</div>
 	<div id="nav">
-		<div class="brdr"></div>
+		<div class="brdr mt"></div>
 		<div class="row navigation">
 
-			<div class="row" style="text-align:center;">Subscribe
+			<div class="row txt-center">Subscribe
 				<p>Awesome section description goes here.</p></div>
-				<div class="row" style="height:100px;">
+				<div class="row sub-mobile" style="height:100px;">
 				<div class="schedule" style="margin-right:110px;">	
 					<div class="box regbtn">Subcribe</div>
-					<p class="sub">Email</p>
+					<p class="sub bgwhite">Email</p>
 				</div>
 			</div>
 			<p>
@@ -180,12 +182,12 @@
 
 <div id="nav">
 	<div id="nav" style="margin-top:25px;">
-		<div class="row speaker-wrapper">
+		<div class="speaker-wrapper">
 			<div id="nav">
-				<div class="nav" style="text-align:center;">
+				<div class="nav txt-center">
 					Speaker
 					<p>Awesome section description goes here.</p>
-					<div class="event">
+					<div class="event speakers">
 						<div class="speaker speak6"></div>
 						Jane Doe
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
@@ -196,8 +198,8 @@
 					Michele Doe
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 				</div>
-				<div class="event mr">
-					<div class="speaker speak4"></div>
+				<div class="event mr marg-l">
+					<div class="speaker speak4 res-speaker"></div>
 					Michele Doe
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 				</div>
@@ -205,13 +207,35 @@
 		</div>
 		<div class="row speaker-wrapper">
 			<div id="nav">
-				<div class="event">
+				<div class="nav" style="text-align:center;">
+					
+					<div class="event speakers adj-speaker3">
+						<div class="speaker speak3"></div>
+						Jane Doe
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+					</div>
+				</div>
+				<div class="event mr marg-l">
+					<div class="speaker speak2"></div>
+					Michele Doe
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+				</div>
+				<div class="event mr">
+					<div class="speaker speak1 res-speaker"></div>
+					Michele Doe
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+				</div>
+			</div>
+		</div>
+		<!-- <div class="row speaker-wrapper">
+			<div class="nav" style="text-align:center;">
+				<div class="event adj-speaker3 speakers">
 					<div class="speaker speak3"></div>
 					Nick Doe
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 				</div>
-			</div>
-			<div class="event mr">
+			
+			<div class="event mr marl speakers">
 				<div class="speaker speak2"></div>
 				Valerie Doe
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
@@ -221,19 +245,20 @@
 				Mike Doe
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 			</div>
-		</div>
+			</div>
+		</div> -->
 	</div>
 </div>
 <div id="nav">
 <div id="nav">
 		<div class="row faq-wrapper">
 			<div id="nav">
-				<div class="nav" style="text-align:right;">
+				<div class="nav clearfix txt-center">
 				F.A.Q
 				<p>Awesome section description goes here.</p>
 				</div>
 				<br>
-				<div class="sch">
+				<div class="sch faq-mobile">
 					<div class="schedule"><p>Lorem ipsum dolor sit amet ?</p><div class="part">
 								<img src="image/icon-greyplus.png" alt="" class="plus">
 							</div></div>
@@ -241,7 +266,7 @@
 								<img src="image/icon-greyplus.png" alt="" class="plus">
 							</div></div>
 				</div>
-				<div class="sch">
+				<div class="sch faq-mobile">
 					<div class="schedule"><p>Lorem ipsum dolor sit amet ?</p><div class="part">
 								<img src="image/icon-greyplus.png" alt="" class="plus">
 							</div></div>
@@ -252,141 +277,115 @@
 			</div>
 		</div>
 	</div>
-	<div class="brdr"></div>
-	<div class="nav" style="text-align:center;">
-		<div class="row partner-wrapper">
+	<div class="brdr mt"></div>
+	<div class="nav txt-center">
+		<div class="partner-wrapper">
 			Parteners
 			<p>Awesome section description goes here.</p>
-			<div class="sch" style="width:25%">
+			<div  class="sch part-width">
 				<div class="schedule clear partners">
 					<img src="image/logo-01.png">
 				</div>
 			</div>
-			<div class="sch" style="width:25%">
+			<div class="sch part-width">
 				<div class="schedule clear partners">
 					<img src="image/logo-05.png">
 				</div>
 			</div>
-			<div class="sch" style="width:25%">
+			<div class="sch part-width">
 				<div class="schedule clear partners">
 					<img src="image/logo-04.png">
 				</div>
 			</div>
-			<div class="sch" style="width:25%">
+			<div class="sch part-width">
+			<!-- <div class="part-width"> -->
 				<div class="schedule clear partners">
 					<img src="image/logo-03.png">
 				</div>
+				<!-- </div> -->
 			</div>
 			
 		</div>
 	</div>
-	<div class="brdr"></div>
+	<div class="brdr mt"></div>
 	<div class="nav">
-		<div class="row pricing-table">
+		<div class="pricing-table clearfix">
 				Pricing table<br><p>Awesome section description goes here.</p>
-				<div class="sch pricing-row">
-					
-				</div>
-				<div class="sch pricing-row">
-					<div class="schedule pricing-colom">silver</div>
-				</div>
-				<div class="sch pricing-row">
-					<div class="schedule pricing-colom">gold</div>
-				</div>
-				<div class="sch pricing-row">
-					<div class="schedule pricing-colom">platinum</div>
-				</div>
-				<div class="sch pricing-row">
+				<div class="sch pricing-row fltnone hide">
+				<div class="row topmarg"></div>
 				
-				</div>
-				<div class="sch pricing-row">
-					<div class="schedule pricing-colom box">$99</div>
-				</div>
-				<div class="sch pricing-row">
-					<div class="schedule pricing-colom box">$199</div>
-				</div>
-				<div class="sch pricing-row">
-					<div class="schedule pricing-colom box">$299</div>
-				</div>
-				<div class="sch pricing-row">
 					<div class="row choice">Seat</div>
+						<div class="row choice">Coffee Break</div>
+						<div class="row choice">Certificate</div>
 				</div>
-				<div class="sch pricing-row">
-					<div class="schedule pricing-colom"><div class="part select">
+				<div class="sch pricing-row fltnone">
+					<div class="schedule pricing-colom">Silver</div>
+					<div class="schedule pricing-colom box">$99</div>
+					<div class="schedule pricing-colom"><p class="visible">Seat</p><div class="part select">
 					<img src="image/Icon-check-white.png" alt="" class="plus">
 					</div></div>
+					<div class="schedule pricing-colom"><p class="visible">Coffee Break</p><div class="part select" style="background-color:grey;">
+						<img src="image/white-minus-2-512.png" alt="" class="plus">
+					</div></div>
+					<div class="schedule pricing-colom"><p class="visible">Certificate</p><div class="part select" style="background-color:grey;">
+						<img src="image/white-minus-2-512.png" alt="" class="plus">
+					</div></div>
 				</div>
-				<div class="sch	pricing-row">
-					<div class="schedule pricing-colom"><div class="part select">
+				<div class="sch pricing-row fltnone">
+					<div class="schedule pricing-colom">Gold</div>
+					<div class="schedule pricing-colom box">$199</div>
+					<div class="schedule pricing-colom"><p class="visible">Seat</p><div class="part select">
 					<img src="image/Icon-check-white.png" alt="" class="plus"></div></div>
-				</div>
-				<div class="sch pricing-row">
-					<div class="schedule pricing-colom"><div class="part select">
+					<div class="schedule pricing-colom"><p class="visible">Coffee Break</p><div class="part select">
 						<img src="image/Icon-check-white.png" alt="" class="plus">
 					</div></div>
-				</div>
-
-				<div class="sch pricing-row">
-					<div class="row choice">coffee break</div>
-				</div>
-				<div class="sch pricing-row">
-					<div class="schedule pricing-colom"><div class="part select" style="background-color:grey;">
+					<div class="schedule pricing-colom"><p class="visible">Certificate</p><div class="part select" style="background-color:grey;">
 						<img src="image/white-minus-2-512.png" alt="" class="plus">
 					</div></div>
 				</div>
-				<div class="sch	pricing-row">
-					<div class="schedule pricing-colom"><div class="part select">
+				<div class="sch pricing-row fltnone">
+					<div class="schedule pricing-colom">Platinum</div>
+					<div class="schedule pricing-colom box">$299</div>
+					<div class="schedule pricing-colom"><p class="visible">Seat</p><div class="part select">
+						<img src="image/Icon-check-white.png" alt="" class="plus">
+					</div></div>
+					<div class="schedule pricing-colom"><p class="visible">Coffee Break</p><div class="part select">
+						<img src="image/Icon-check-white.png" alt="" class="plus">
+					</div></div>
+					<div class="schedule pricing-colom"><p class="visible">Certificate</p><div class="part select">
 						<img src="image/Icon-check-white.png" alt="" class="plus">
 					</div></div>
 				</div>
-				<div class="sch pricing-row">
-					<div class="schedule pricing-colom"><div class="part select">
-						<img src="image/Icon-check-white.png" alt="" class="plus">
-					</div></div>
-				</div>
-				<div class="sch pricing-row">
-					<div class="row choice">certificate</div>
-				</div>
-				<div class="sch pricing-row">
-					<div class="schedule pricing-colom"><div class="part select" style="background-color:grey;">
-						<img src="image/white-minus-2-512.png" alt="" class="plus">
-					</div></div>
-				</div>
-				<div class="sch pricing-row">
-					<div class="schedule pricing-colom"><div class="part select" style="background-color:grey;">
-						<img src="image/white-minus-2-512.png" alt="" class="plus">
-					</div></div>
-				</div>
-				<div class="sch pricing-row">
-					<div class="schedule pricing-colom"><div class="part select">
-						<img src="image/Icon-check-white.png" alt="" class="plus">
-					</div></div>
-				</div>
+				
+				
+				
+				
 			</div>
 
 	</div>
-		<div class="brdr" style="margin-top:20px;"></div>
-		<div id="nav" class="row" style="text-align:center;">
+		<div class="brdr mt" style="margin-top:20px;"></div>
+		<div id="nav" class="row txt-center">
 			Register
 			<p>Awesome section description goes here.</p>
-			<div class="row" style="height:140px;">
-				<div class="schedule" style="margin-right:60px;padding-bottom:10px;">	
+			<div class="reg-h">
+				<div class="schedule reg-adj">	
+					
+					<div class="regbar">
+						<p class="tgrey">name</p>
+					</div>
+					<div class="regbar">
+						<p class="tgrey">Email</p>
+					</div>
+					<div class="regbar">
+						<p class="tgrey">Telephone</p>
+					</div>
+					<div class="regbar">
+						<p class="tgrey">Silver</p>
+					</div>
+					<div class="regbar">
+						<p class="tgrey">Paypal</p>
+					</div>
 					<div class="box regbtn">Register</div>
-					<div class="regbar">
-						<p>name</p>
-					</div>
-					<div class="regbar">
-						<p>Email</p>
-					</div>
-					<div class="regbar">
-						<p>Telephone</p>
-					</div>
-					<div class="regbar">
-						<p>Silver</p>
-					</div>
-					<div class="regbar">
-						<p>Paypal</p>
-					</div>
 				</div>
 				<div class="clear"></div>
 			</div>
@@ -401,7 +400,7 @@
 </div>
 
 <div class="map">
-<div class="nav row footer-wrapper">
+<div class="nav footer-wrapper">
 			
 				<div id="nav">
 					<div class="row footer">
