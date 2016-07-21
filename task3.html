@@ -1,0 +1,110 @@
+<!doctype html>
+<head>
+	<script type="text/javascript">
+	
+	var b;
+var pair;
+var myObj = { 
+    fred: { apples: 2, oranges: 4, bananas: 7, melons: 0 }, 
+    mary: { apples: 0, oranges: 10, bananas: 0, melons: 0 }, 
+    
+}
+
+// console.log( myObj[ 'fred' ][ 'apples' ] );
+	var countries = [{
+		name: "India",
+		id: 1
+	},{
+		name: "USA",
+		id: 2
+	}]
+
+
+
+
+	var cities=
+	[
+		{
+			country_id:1,
+			city:[{
+				name:"mumbai",id:1
+			},{
+				name:"DELHI",id:2
+			}]
+		},
+		
+		{
+			country_id:2,
+			city:[{
+				name:"los angelos",id:3
+			},{
+				name:"san fransisco",id:4
+			}]
+		}
+	]
+	// console.log(cities.city1[1]['name']);
+	// console.log(cities.city[0]);
+
+		for (var i = 0; i <= cities.length; i++) {
+			// console.log(cities[i]['country_id']);
+		}
+			
+ // console.log(countries[0]);
+	// console.log(cities[0]['country_id']);	
+		function set(){
+
+	
+		var s2 = document.getElementById('cities');
+		s2.innerHTML="";
+		var a = cntry.options[cntry.selectedIndex].text;
+		
+		
+		for (var i = 0; i < countries.length; i++) {
+			
+
+			if (countries[i]['name']==a) {
+				b=countries[i]['id'];
+}
+}
+
+				for (var i in cities){
+					if (cities[i]['country_id']==b) {
+				
+			 pair = cities[i];
+			// console.log(pair)
+		// var new1 = document.createElement("option");
+		// new1.value = pair[i]['country_id'];
+		// console.log(pair['city'][i]['name'])
+		for (var j=0; j<2;j++){
+					var new1 = document.createElement("option");
+			new1.value=pair['city'][j]['id']
+			new1.innerHTML=pair['city'][j]['name'];
+			s2.options.add(new1);
+		}
+					// s2.options.add(new1);
+
+	}
+
+			
+		
+
+			}
+		
+		
+}
+
+	</script>
+</head>
+<body>
+<form>	
+	<p>Select Your Country</p>
+	<select id="cntry" onchange="set()">
+		<option>India</option>
+	<option>USA</option>
+	</select>
+
+<select id="cities">
+	</select>
+</form>	
+</body>
+</html>
