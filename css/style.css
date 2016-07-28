@@ -1,16 +1,20 @@
 
 ul {
+  width: 100%;
     list-style-type: none;
     margin: 0;
     padding: 17px 0 0 0;
-    overflow: hidden;
+    overflow:;
     font-size: 30px;
     
     background-color: #ffffff;
 }
 
+
 li {
+  width: 95%;
     float: left;
+    height: 60px;
     padding-left: 10px;
 }
 li p {
@@ -51,15 +55,59 @@ li a:hover:not(.active) {
     height: 30px;
     padding: 5px;
 }
+.blck{
+  height:60px;width: 93%;
+}
+#txt1{
+  margin-left: 180px;
+          padding: 7px;
+          width: 77%;
+          height: 40px;
+          font-size: 20px;
+}
+.ggl{
+  position: relative;
+
+          left: -23px;
+          top: -70px;
+          width: 226px;
+          height: auto;
+}
+li:focus,li:active{
+  color: blue;
+}
+.search{
+  position: relative;
+          left: 74%;
+          top: -201%;
+          height: 108%;
+}
 li a.active {
     color: white;
     background-color: #4fcdff;
+}
+#info{
+  margin: 30px;
+  height: 500px;
+  padding: 50px;
+
+  border:1px solid; 
 }
 #section{
  	padding: 20px;
 	background-image: url(../image/bg.jpg);
 	box-sizing: border-box;
 	height: 1000px;
+}
+#my-div{
+  border: 1px solid  rgba(128, 128, 128, 0.19);
+    margin-top: 0px;border-style:outset;
+    margin-left: 191px;
+    height: 185px;
+    overflow: scroll;
+
+    width: 831px;
+    display:none;
 }
 #nav {
     height: auto;
@@ -278,6 +326,19 @@ h3{
 .bg1{
   background-image: url(../image/localization-icon-27.png);
 }
+#movie-container{
+  
+    text-align: left;
+    margin-top: 0px;
+    position: absolute;
+    width: 58%;
+    padding-top: 0px;
+    padding-left: 25%;
+}
+.li-height{
+  height: 54px;
+}
+
 .blk {
 
     display: inline-block;
@@ -301,6 +362,14 @@ h3{
     margin: 0px;
     padding: 0px;
 }
+.sch1{
+  position: relative;
+  background: #FFFFFE;
+    width: 25%;
+    float: left;
+    height: auto;
+    border:1px solid;
+    }
 .blk1{
     float: left;
     margin-right: 30px;
