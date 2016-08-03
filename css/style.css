@@ -33,7 +33,12 @@ li a {
 .btn{
   display: none;
 }
-
+li:hover{
+  background-color: #eee !important;
+}
+#info li:hover{
+  background-color: #ffffff;
+}
 li a:hover:not(.active) {
 	display: block;
     background-color: #ddd;
@@ -43,6 +48,9 @@ li a:hover:not(.active) {
   margin: 10px;
   padding: 0px;
   position: relative;
+}
+.visible{
+  display: block;
 }
 .nav-event{
   position: absolute;
@@ -59,17 +67,18 @@ li a:hover:not(.active) {
   height:60px;width: 93%;
 }
 #txt1{
-  margin-left: 180px;
+  margin-left: 140px;
           padding: 7px;
-          width: 77%;
+          width: 67%;
           height: 40px;
           font-size: 20px;
+          position: fixed;
 }
 .ggl{
-  position: relative;
+  position: fixed;
 
           left: -23px;
-          top: -70px;
+          top: 47px;
           width: 226px;
           height: auto;
 }
@@ -77,21 +86,28 @@ li:focus,li:active{
   color: blue;
 }
 .search{
-  position: relative;
-          left: 74%;
-          top: -201%;
-          height: 108%;
+  
+    position: relative;
+    width: 65px;
+    left: 102%;
+    top: -5px;
+    height: 65px;
+    background-image: url(../image/searchimg.png);
+    background-size: contain;
 }
 li a.active {
     color: white;
     background-color: #4fcdff;
 }
+#info .loading{
+  float: left;
+}
 #info{
   margin: 30px;
-  height: 500px;
+  height: 600px;
   padding: 50px;
-
-  border:1px solid; 
+  border:1px solid;
+  display: none; 
 }
 #section{
  	padding: 20px;
@@ -101,13 +117,12 @@ li a.active {
 }
 #my-div{
   border: 1px solid  rgba(128, 128, 128, 0.19);
-    margin-top: 0px;border-style:outset;
-    margin-left: 191px;
+    margin-top: -7px;border-style:outset;
+    margin-left: 140px;
     height: 185px;
     overflow: scroll;
-
-    width: 831px;
-    display:none;
+    position: fixed;
+    width: 69%;
 }
 #nav {
     height: auto;
@@ -563,6 +578,13 @@ p{
   width: 90%;
 
 }
+.loading{
+  background-image: url(../image/ajax-loader.gif);
+  float: right;
+  background-repeat: no-repeat;
+  background-position: right center;
+
+}
 .speak3{
   background:url(../image/speaker-04.jpg);
   width: 90%;
@@ -572,10 +594,10 @@ p{
   width: 90%;
 
 }
-.visible{
+/*.visible{
   display: none;
 }
-.speak5{
+*/.speak5{
   float:center;background:url(../image/speaker-02.jpg);
   width: 90%;
 
@@ -660,4 +682,7 @@ h2{
 .clear{ clear: both; }
 .video-info{
   float:right;width:35%;
+}
+.hidden{
+  display: none;
 }
