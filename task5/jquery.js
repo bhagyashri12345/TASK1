@@ -3,9 +3,12 @@ var selected,a;
 $(document).ready(function(){
 	// console.log($("ul li"))
 	
+    		
+
 
     $("#txt1").keyup(function(str){
     	// alert("jhedg")
+    	var sel=$(".something");
     	$("#txt1").attr('class',"loading");
     	if(str['target']['value']==""){$("#my-div").attr('class','hidden');
     		$("#txt1").attr('class',"");
@@ -49,25 +52,13 @@ $(document).ready(function(){
     		$.get("http://www.omdbapi.com/?i="+this.id,function(value,Response){
     			$("#txt1").attr('class',"");
     		
-    				if(value['Poster']=="N/A"){
-    					value['Poster']="movie.jpg"
-    				}
-    			 $("#myimg").attr('src',value['Poster']).removeClass('hidden');
-    			 $("#movieName").text("Movie:"+value['Title']).removeClass('hidden');
-    			 $("#rated").text("Rated:"+value['Rated']).removeClass('hidden');
-    			 $("#rel").text("Released:"+value['Released']).removeClass('hidden');
-    			 $("#run").text("Runtime:"+value['Runtime']).removeClass('hidden');
-    			 $("#rate").text("Rating:"+value['imdbRating']).removeClass('hidden');
-    			 $("#plt").text("Plot:"+value['Plot']).removeClass('hidden');
-    			 $("#info").removeClass("loading1");
+    				movie_info(value);
     		});
     	});
    	}
 }
 //     		
 //     		
-    		var sel=$(".something");
-
     		
     		if(str.which==40){
     				$("#txt1").attr('class',"");
@@ -75,9 +66,7 @@ $(document).ready(function(){
     			$("#my-div").attr('class','visible');
     			$("#found").attr('class','hidden');
     			s++;
-    			selected =  $(sel[s]);
-    			selected.prev().removeClass('selected');
-    			selected.addClass('selected');
+    			upDown(s);
     			if(s==a.Search.length){
     				selected.removeClass('selected');
     				$(sel[s-1]).removeClass('selected');
@@ -100,10 +89,9 @@ $(document).ready(function(){
     			$("#info").attr('class','hidden');
     			$("#my-div").attr('class','visible');
      				$("#found").attr('class','hidden');
-
-     			 selected =  $(sel[s]);
-     			 selected.next().removeClass('selected');
-     			selected.addClass('selected');
+     				upDown(s);
+     				console.log(s)
+     			 
      			
      			$("#txt1").val(sel[s].textContent);
      			s--;
@@ -128,18 +116,7 @@ $(document).ready(function(){
      			$("#txt1").attr('class',"");
    			$("#my-div").attr('class','hidden');
      			$("#info").attr('class','visible');
-     			if(value['Poster']=="N/A"){
-    					value['Poster']="movie.jpg"
-    				}
-
-    			 $("#myimg").attr('src',value['Poster']).removeClass('hidden');
-     			 $("#movieName").text("Movie:"+value['Title']).removeClass('hidden');
-    			 $("#rated").text("Rated:"+value['Rated']).removeClass('hidden');
-     			 $("#rel").text("Released:"+value['Released']).removeClass('hidden');
-     			 $("#run").text("Runtime:"+value['Runtime']).removeClass('hidden');
-     			 $("#rate").text("Rating:"+value['imdbRating']).removeClass('hidden');
-    			 $("#plt").text("Plot:"+value['Plot']).removeClass('hidden');
-    			 $("#info").removeClass("loading1");
+     			movie_info(value);
     		});
     		}
 
@@ -166,7 +143,27 @@ $(document).ready(function(){
     	$("#found").attr('class','hidden');
     	$("#info").attr('class','hidden');}
     });
-    });
+});
+	function movie_info(value){
+		if(value['Poster']=="N/A"){
+    					value['Poster']="movie.jpg"
+    				}
 
+    			 $("#myimg").attr('src',value['Poster']).removeClass('hidden');
+     			 $("#movieName").text("Movie:"+value['Title']).removeClass('hidden');
+    			 $("#rated").text("Rated:"+value['Rated']).removeClass('hidden');
+     			 $("#rel").text("Released:"+value['Released']).removeClass('hidden');
+     			 $("#run").text("Runtime:"+value['Runtime']).removeClass('hidden');
+     			 $("#rate").text("Rating:"+value['imdbRating']).removeClass('hidden');
+    			 $("#plt").text("Plot:"+value['Plot']).removeClass('hidden');
+    			 $("#info").removeClass("loading1");
+	}
+	function upDown(s){console.log(s);
+		var sel=$(".something");
+	selected =  $(sel[s]);
+     			 selected.next().removeClass('selected');
+     			 selected.prev().removeClass('selected');
+
+     			selected.addClass('selected');}
     
 });
